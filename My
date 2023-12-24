@@ -229,15 +229,7 @@ local function stopAutoParry()
        print("Auto Parry off")
  end
 end
-
-local function onAutoParry()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry",true))()
- end
    
- local function offAutoParry()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry",false))()
-end
-
 Main:AddToggle({
 	Name = "Auto Parry v1",
 	Default = false,
@@ -260,12 +252,8 @@ Main:AddToggle({
 
 Main:AddButton({
 	Name = "Auto Parry v2",
-	Callback = function(Value)
-   if Value then
-         	onAutoParry()
-         else
-             offAutoParry()
-             end
+	Callback = function()
+         	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry"))()
 	end    
 })
 
